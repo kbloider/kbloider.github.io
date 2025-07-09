@@ -1,37 +1,104 @@
-# Flexible-Jekyll is a simple and clean theme for Jekyll
+# 다독다독 홈페이지
 
-![](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/promo-img.jpg?raw=true)
+유튜브 다독다독([@dadokbooktalk](https://www.youtube.com/@dadokbooktalk)) 채널을 위한 공식 홈페이지입니다.
 
-## Demo
+## 🌟 주요 기능
 
-Check the theme in action [Demo](https://artemsheludko.github.io/flexible-jekyll/)
+- **📺 추천 영상**: 다독다독의 인기 북토크 영상들을 쉽게 찾아볼 수 있습니다
+- **👥 출연진 소개**: 다독다독과 함께하는 북토크 전문가들을 소개합니다
+- **📚 도서 판매**: 영상에서 소개된 책들을 바로 구매할 수 있습니다
+- **🤖 AI 챗봇**: 영상 내용 기반의 AI 챗봇으로 책 추천과 독서법을 상담받을 수 있습니다
+- **📞 문의 시스템**: 출연문의, 협찬문의, 광고문의를 쉽게 할 수 있습니다
 
-The main page would look like this:
+## 🚀 시작하기
 
-![Main page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/home-page.jpg?raw=true)
+### 1. 의존성 설치
 
-The post page would look like this:
+```bash
+npm install
+```
 
-![Post page preview](https://github.com/artemsheludko/flexible-jekyll/blob/master/assets/img/post-example.jpg?raw=true)
+### 2. 개발 서버 실행
 
-## Features
+```bash
+npm start
+```
 
-- [Google Fonts](https://fonts.google.com/)
-- [Font Awesome](http://fontawesome.io/)
-- [Disqus](https://disqus.com/)
-- [Analytics](https://analytics.google.com/analytics/web/)
-- Support Emoji
+브라우저에서 [http://localhost:3000](http://localhost:3000)으로 접속하면 홈페이지를 확인할 수 있습니다.
 
-## Installation:
+### 3. 빌드
 
-Fork the ``master`` branch and follow the [Jekyll Installation Documentation](https://jekyllrb.com/docs/installation/).
+```bash
+npm run build
+```
 
-## License
+## 🛠 기술 스택
 
-GNU General Public License v3.0
+- **Frontend**: React 18
+- **Styling**: CSS3 (모던 CSS Grid & Flexbox)
+- **Icons**: React Icons (Feather Icons)
+- **Font**: Noto Sans KR (Google Fonts)
 
-## Donate
+## 📱 주요 섹션
 
-<p>If you want to show your appreciation, buy me one <a href="https://www.buymeacoffee.com/artemsheludko" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a> ! Every five cups of coffee and a new theme for Jekyll is ready 😋</p>
-<p>Either way, your support is a way to thank me ❤️</p>
-<p align="center"><b>Thank you for your support!</b></p>
+### 1. 헤더 & 네비게이션
+- 반응형 메뉴
+- 유튜브 채널 바로가기
+- 부드러운 스크롤 네비게이션
+
+### 2. 히어로 섹션
+- 채널 소개
+- 주요 통계 (구독자, 리뷰도서, 영상콘텐츠)
+- CTA 버튼들
+
+### 3. 추천 영상
+- 카테고리별 영상 필터링
+- 영상 미리보기
+- 조회수 및 재생시간 표시
+
+### 4. 출연진 소개
+- 전문분야별 출연진 정보
+- 소셜미디어 연결
+- 호버 효과
+
+### 5. 도서 판매
+- 카테고리별 필터링
+- 별점 및 리뷰 시스템
+- 할인 정보 표시
+- 장바구니 기능
+
+### 6. AI 챗봇
+- 실시간 채팅 인터페이스
+- 미리 정의된 질문 버튼
+- 플로팅 챗봇 위젯
+- 타이핑 애니메이션
+
+### 7. 문의하기
+- 유형별 문의 시스템
+- 연락처 정보
+- 온라인 문의 폼
+
+### 8. 푸터
+- 소셜미디어 링크
+- 뉴스레터 구독
+- 운영시간 안내
+- 저작권 정보
+
+## 📧 문의처
+
+- **일반 문의**: contact@dadok.com
+- **출연 문의**: casting@dadok.com
+- **협찬 문의**: sponsor@dadok.com
+- **광고 문의**: ad@dadok.com
+
+## 🎨 디자인 특징
+
+- **모던한 UI/UX**: 깔끔하고 직관적인 인터페이스
+- **반응형 디자인**: 모바일, 태블릿, 데스크톱 모든 기기 지원
+- **부드러운 애니메이션**: 호버 효과와 트랜지션
+- **접근성**: 스크린 리더 지원 및 키보드 네비게이션
+- **브랜드 컬러**: 보라색 계열의 브랜드 컬러 활용
+
+## 📄 라이선스
+
+© 2024 다독다독. All rights reserved.
