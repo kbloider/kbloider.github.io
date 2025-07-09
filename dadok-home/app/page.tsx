@@ -1,49 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { getLatestVideos, Video } from '@/lib/youtube';
 
 export const revalidate = 600; // ISR 10 minutes
 
-type Video = {
-  id: string;
-  title: string;
-  thumbnail: string;
-};
-
-async function fetchLatestVideos(): Promise<Video[]> {
-  const apiKey = process.env.YOUTUBE_API_KEY;
-  const channelId = process.env.YOUTUBE_CHANNEL_ID ?? 'UCItZYATL__rXqGXIhN3kLBQ';
-
-  if (!apiKey) {
-    console.warn('Missing YOUTUBE_API_KEY env var');
-    return [];
-  }
-
-  const res = await fetch(
-    `https://www.googleapis.com/youtube/v3/search?key=${apiKey}&channelId=${channelId}&part=snippet,id&order=date&maxResults=8`,
-    {
-      // Next.js extended fetch options
-      next: { revalidate: 600 },
-    } as any
-  );
-
-  if (!res.ok) {
-    console.error('YouTube API request failed', res.status);
-    return [];
-  }
-
-  const json = await res.json();
-
-  return json.items
-    .filter((item: any) => item.id.kind === 'youtube#video')
-    .map((item: any) => ({
-      id: item.id.videoId,
-      title: item.snippet.title,
-      thumbnail: item.snippet.thumbnails.high.url,
-    }));
-}
-
 export default async function Home() {
-  const videos = await fetchLatestVideos();
+  let videos: Video[] = [];
+  try {
+    videos = await getLatestVideos(8, { cacheSeconds: 600 });
+  } catch (err) {
+    console.error(err);
+  }
   const hero = videos[0];
 
   return (
