@@ -241,7 +241,3 @@ restartBtn.onclick = function() {
 
 ---
 
-**작성자: [ChatGPT] 숲 속 소년 수집 게임 소스 설명서 (2025-07-17)**
-
----
-
