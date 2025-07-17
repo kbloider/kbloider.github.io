@@ -6,6 +6,7 @@
   <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 </head>
 <body>
+  <div id="preview" style="width:100%;height:90vh;float:right;overflow:auto;border-left:1px solid #ccc;padding-left:10px;"></div>
   <textarea id="md" style="visibility: hidden;"># 숲 속 소년 수집 게임 소스 설명서
 
 ## 목차
@@ -251,7 +252,6 @@ restartBtn.onclick = function() {
 ---
 
 </textarea>
-  <div id="preview" style="width:100%;height:90vh;float:right;overflow:auto;border-left:1px solid #ccc;padding-left:10px;"></div>
   <script>
     const md = document.getElementById('md');
     const preview = document.getElementById('preview');
